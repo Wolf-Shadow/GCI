@@ -1,8 +1,9 @@
 # Creating a Challenge
 
-One can create a challenge in EvalAI using either:
+One can create a challenge in EvalAI by either using:
 
 1. zip configuration
+        or
 2. web interface
 
 ## Challenge creation using zip configuration
@@ -23,7 +24,7 @@ The challenge configuration file on EvalAI consists of following fields:
 
 * **terms_and_conditions**: Terms and conditions of the challenge (use a relative path for the html file, e.g. `challenge_details/tnc.html`)
 
-* **image**: Logo of the challenge (use a relative path for the logo in the zip configuration, e.g. `images/logo/challenge_logo.jpg`). **Note**: The image must be in jpg, jpeg or png format.
+* **image**: Logo for challenge (use a relative path for the logo in the zip configuration, e.g. `images/logo/challenge_logo.jpg`). **Note**: The image must be in jpg, jpeg or png format.
 
 * **submission_guidelines**: Submission guidelines of the challenge (use a relative path for the html file, e.g. `challenge_details/submission_guidelines.html`)
 
