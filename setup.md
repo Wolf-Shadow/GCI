@@ -1,6 +1,6 @@
 # How to setup
 
-EvalAI can run on Linux, Cloud, Windows, and macOS platforms. Use the following list to choose the best installation path for you. The links under *Platform* take you straight to the installation instructions for that platform.
+EvalAI can run on Linux, Cloud, Windows, and macOS platforms. Use the following list to choose the best installation path you prefer. The links under *Platform* take you straight to the installation instructions for that platform.
 
 ## Ubuntu Installation Instructions
 
@@ -43,7 +43,7 @@ If you haven't already created an ssh key and added it to your GitHub account,
 you should do that now by following [these
 instructions](https://help.github.com/articles/connecting-to-github-with-ssh/).
 
-* In your browser, visit [https://github.com/Cloud-CV/EvalAI](https://github.com/Cloud-CV/EvalAI) and click the `fork` button. You will need to be logged in to GitHub to do this.
+* In your browser, visit [https://github.com/Cloud-CV/EvalAI](https://github.com/Cloud-CV/EvalAI) and click the `fork` button. You need to be logged in to GitHub to do this.
 
 * Open Terminal and clone your fork by
 
@@ -80,7 +80,7 @@ psql -U postgres -c "ALTER USER postgres PASSWORD 'postgres';"
 python manage.py migrate --settings=settings.dev
 ```
 
-* For setting up frontend, run
+* To setup frontend, run
 
 ```shell
 npm install
@@ -155,7 +155,7 @@ If you haven't already created an ssh key and added it to your GitHub account,
 you should do that now by following [these
 instructions](https://help.github.com/articles/connecting-to-github-with-ssh/).
 
-* In your browser, visit [https://github.com/Cloud-CV/EvalAI](https://github.com/Cloud-CV/EvalAI) and click the `fork` button. You will need to be logged in to GitHub to do this.
+* In your browser, visit [https://github.com/Cloud-CV/EvalAI](https://github.com/Cloud-CV/EvalAI) and click the `fork` button. You need to be logged in to GitHub to do this.
 
 * Open Terminal and clone your fork by
 
@@ -192,7 +192,7 @@ psql -U postgres -c "ALTER USER postgres PASSWORD 'postgres';"
 python manage.py migrate --settings=settings.dev
 ```
 
-* For setting up frontend, run
+* To setup frontend, run
 
 ```shell
 curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
