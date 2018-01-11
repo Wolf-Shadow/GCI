@@ -4,7 +4,7 @@ This is a collection of records for architecturally significant decisions.
 
 ### URL Patterns
 
-We follow a very basic, yet strong convention for URLs, so that our rest APIs are properly namespaced. First of all, we rely heavily on
+We follow a very basic, yet strong convention for URLs, so that our other APIs are properly namespaced. First of all, we rely heavily on
 HTTP verbs to perform **CRUD** actions.
 
 For example, to perform **CRUD** operation on _Challenge Host Model_, the following URL patterns will be used.
@@ -43,10 +43,10 @@ request here means to send the response to the participant only when the submiss
 work fine if the number of the submissions made is very low, but this is not the case.
 
 Hence we decided to process and evaluate submission message in an asynchronous manner. To process the messages this way, we need to 
-change our architecture a bit and add a Message Framework, along with a worker so that it can process the message.
+change our architecture slightly and add a Message Framework, along with a worker so that it can process the message.
 
 Out of all the awesome messaging frameworks available, we have chosen RabbitMQ because of its transactional nature and reliability.
-Also, RabbitMQ is easily horizontally scalable, which means we can easily handle the heavy load by simply adding more nodes to the 
+Also, RabbitMQ can be easily scaled horizontally, which means we can easily handle the heavy load by simply adding more nodes to the 
 cluster.
 
 For the worker, we went ahead with a normal python worker, which simply runs a process and loads all the required data in its memory. 
@@ -58,7 +58,7 @@ The submission worker are responsible for processing submission messages. It lis
 receiving a message for a submission, it processes and evaluates the submission.
 
 One of the major design changes that we decided to implement in the submission worker was to load all the data related to the challenge
-in the worker's memory, instead of fetching it every time a new submission message arrives. So the worker, when starting, fetches the 
+in the worker's memory, instead of fetching it every time a new submission message arrives. So the worker, on starting, retrives the 
 list of active challenges from the database and then loads it into memory by maintaining the map `EVALUATION_SCRIPTS` on challenge id. 
 This was actually a major performance improvement.
 
@@ -71,4 +71,4 @@ EVALUATION_SCRIPTS[challenge_id].evaluate(*params)
 ```
 
 This was again a major performance improvement, which saved us from the task of invoking and managing Python processes to evaluate 
-submission messages. Also, invoking a new python process every time for a new submission would have been really slow.
+submission messages ,as invoking a new python process every time for a new submission is time consuming.
