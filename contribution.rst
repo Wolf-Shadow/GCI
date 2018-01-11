@@ -18,18 +18,18 @@ that interests you, comment on the thread and we’ll help get you
 started.
 
 Alternatively, if you come across a new bug on the site, please file a
-new issue and comment if you would like to be assigned. Existing
+new issue and comment if you would like it to be assigned. Existing
 issues are tagged with one or more labels, based on the part of the
 website it touches, its importance etc., which can help you select
 one.
 
 If neither of these seem appealing, please post on our channel and we
-will help find you something else to work on.
+will help to find something else for you to work on.
 
 Instructions to submit code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Before you submit code, please talk to us via the issue tracker so we
+Before you submit code, please talk to us via the issue tracker so we can
 know you are working on it.
 
 Our central development branch is `development`. Coding is done on feature
