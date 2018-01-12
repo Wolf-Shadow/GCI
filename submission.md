@@ -40,7 +40,7 @@ Before a worker fully starts, it does the following actions:
 
 * Creates a connection with RabbitMQ by using the connection parameters specified in `settings.RABBITMQ_PARAMETERS`.
 
-* After the connection is successfully created, creates an exchange with the name `evalai_submissions`
+* After the connection is successfully created,it creates an exchange with the name `evalai_submissions`
 and two queues, one for processing submission message namely `submission_task_queue`, and other for getting add challenge message.
 
 * `submission_task_queue` is then bound with the routing key of `submission.*.*` and add challenge message queue is bound with a key of `challenge.add.*`
@@ -78,9 +78,9 @@ After the challenges are successfully loaded, it creates a connection with the R
 
 ### How is submission made?
 
-When the user makes submission on the frontend, the following actions happen sequentially
+When the user makes submission on the frontend, the following actions will happen sequentially:
 
-* As soon as the user submits a submission, a REST API with the URL pattern `jobs:challenge_submission` is called.
+* As soon as the user submits a submission, a REST API with the URL pattern `jobs:challenge_submission` will be called.
 
 * This API fetches the challenge and its corresponding challenge phase.
 
@@ -111,7 +111,7 @@ This message is published with a routing key of `submission.*.*`
 
 Upon receiving a message from `submission_task_queue` with a binding key of `submission.*.*`, `process_submission_callback` is called. This function does the following:
 
-* It fetches the challenge phase and submission object from the database using the challenge phase id and submission id received in the message.
+* It fetches the challenge phase and submission object from the database using the challenge phase id and submission id is received in the message.
 
 * It then downloads the required files like input_file, etc. for submission in its computation directory.
 
